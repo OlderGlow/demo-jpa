@@ -22,7 +22,7 @@ public class Client {
     @Embedded
     private Adresse adresse;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Banque banque;
 
     @ManyToMany
